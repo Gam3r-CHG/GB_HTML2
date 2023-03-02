@@ -47,6 +47,10 @@ img {
   margin-right: 16px;
 }
 
+body {
+  overflow-x: clip;
+}
+
 .header {
   background: #222222;
 }
@@ -97,6 +101,79 @@ img {
   font-size: 12px;
   line-height: 14px;
   color: #FFFFFF;
+}
+
+#hamburger {
+  display: none;
+}
+#hamburger + nav {
+  transform: translate(100%);
+  transition: transform 0.3s ease-in-out;
+}
+#hamburger:checked + nav {
+  transform: translateX(0);
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  position: absolute;
+  top: 75px;
+  right: 0;
+  background-color: white;
+  z-index: 100;
+  padding: 37px 34px 32px 34px;
+  min-width: 232px;
+  box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+}
+.menu__title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 17px;
+  color: #000000;
+  display: flex;
+}
+.menu__sub-box {
+  display: flex;
+  gap: 24px;
+}
+.menu__sub-box > .menu__title {
+  cursor: pointer;
+}
+.menu__sub-box > .menu__title:hover {
+  color: #F16D7F;
+}
+.menu__sub-box[open] .menu__title {
+  color: #F16D7F;
+}
+.menu__links {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  margin-top: 12px;
+  margin-left: 20px;
+}
+.menu__link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17px;
+  color: #6F6E6E;
+}
+.menu__link:hover {
+  color: #F16D7F;
+}
+.menu__exit {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background-color: transparent;
+  border: none;
+}
+.menu__exit:hover path {
+  fill: #F16D7F;
 }
 
 .top {
