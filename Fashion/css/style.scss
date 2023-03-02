@@ -119,6 +119,12 @@ img {
   justify-content: space-between;
   align-items: center;
 
+  @media screen and (max-width: 550px) {
+    flex-direction: column;
+    justify-content: center;
+    gap: 32px;
+  }
+
   &__title {
     font-style: normal;
     font-weight: 400;
@@ -174,13 +180,14 @@ img {
     background-color: rgba(42, 42, 42, 0.15);
     position: absolute;
     top: 50%;
+    transform: translateY(-50%);
+    margin-left: 0;
+    margin-right: 0;
 
-    &:hover path{
+    &:hover path {
       fill: vars.$titleColor;
     }
   }
-
-
 
   &__left-arrow {
     left: 0;
@@ -196,6 +203,10 @@ img {
   position: relative;
   margin-bottom: 129px;
 
+  @media screen and (max-width: 767px) {
+    margin-bottom: 64px;
+  }
+
   &__wrapper {
     display: flex;
     flex-direction: column;
@@ -204,6 +215,13 @@ img {
     border: 1px solid #EAEAEA;
     padding-top: 65px;
     padding-bottom: 65px;
+    margin-left: 0;
+    margin-right: 0;
+
+    @media screen and (max-width: 1024px) {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
   }
 
   &__collection-name {
@@ -229,6 +247,10 @@ img {
     line-height: 22px;
     color: #4D4D4D;
     margin-bottom: 48px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+    }
   }
 
   &__description {
@@ -240,6 +262,10 @@ img {
     text-align: center;
     color: #5E5E5E;
     margin-bottom: 32px;
+
+    @media screen and (max-width: 767px) {
+      line-height: 20px;
+    }
   }
 
   &__price {
@@ -249,26 +275,43 @@ img {
     line-height: 29px;
     color: #EF5B70;
     margin-bottom: 65px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 32px;
+    }
   }
 
   &__grey-line {
     max-width: 641px;
-    width: 80%;
+    width: 60%;
     height: 1px;
     background-color: #EAEAEA;
     margin-bottom: 65px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 50px;
+    }
   }
 
   &__filter {
     margin-bottom: 48px;
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 64px;
+    }
   }
 }
 
 .filter {
   display: flex;
   gap: 23px;
+  position: relative;
 
-  &__item {
+  &__item[open] &__title{
+    color: vars.$titleColor;
+  }
+
+  &__title {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -278,15 +321,34 @@ img {
     font-size: 14px;
     line-height: 17px;
     color: #6F6E6E;
+    cursor: pointer;
+
+    @media screen and (max-width: 767px) {
+      font-size: 10px;
+      line-height: 12px;
+    }
   }
 
-  &__color {
-  }
+  &__box {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding: 16px;
+    position: absolute;
+    top: 24px;
+    background-color: #FFFFFF;
+    border: 1px solid #6F6E6E;
+    width: 100px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
 
-  &__size {
-  }
-
-  &__quantity {
+    label {
+      display: flex;
+      gap: 8px;
+    }
   }
 }
 
@@ -503,6 +565,14 @@ img {
     align-self: center;
     transition: background-color 0.3s ease-in-out, color 0.3s ease-in-out;
 
+    @media screen and (max-width: 1024px) {
+      margin-bottom: 71px;
+    }
+
+    @media screen and (max-width: 767px) {
+      margin-bottom: 85px;
+    }
+
     &:hover {
       background: vars.$titleColor;
       color: #FFFFFF;
@@ -517,7 +587,7 @@ img {
       fill: #FFFFFF;
     }
 
-    path{
+    path {
       fill: vars.$titleColor;
       transition: fill 0.3s ease-in-out;
     }
@@ -779,12 +849,6 @@ img {
     }
   }
 
-  .button {
-    &--browse {
-      margin-bottom: 71px;
-    }
-  }
-
   .information {
     flex-direction: column;
     padding-top: 48px;
@@ -879,12 +943,6 @@ img {
     &__image {
       max-width: 100%;
       object-fit: cover;
-    }
-  }
-
-  .button {
-    &--browse {
-      margin-bottom: 85px;
     }
   }
 
