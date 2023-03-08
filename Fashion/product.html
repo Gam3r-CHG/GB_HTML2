@@ -33,7 +33,7 @@
           </ul>
         </details>
         <details class="menu__sub-box" open>
-          <summary class="menu__title">WOMAN</summary>
+          <summary class="menu__title"> WOMAN</summary>
           <ul class="menu__links">
             <li><a class="menu__link" href="#">Accessories</a></li>
             <li><a class="menu__link" href="#">Jackets & Coats</a></li>
@@ -43,7 +43,7 @@
           </ul>
         </details>
         <details class="menu__sub-box" open>
-          <summary class="menu__title">KIDS</summary>
+          <summary class="menu__title"> KIDS</summary>
           <ul class="menu__links">
             <li><a class="menu__link" href="#">Accessories</a></li>
             <li><a class="menu__link" href="#">Jackets & Coats</a></li>
@@ -68,63 +68,106 @@
   </div>
 </header>
 <main>
-  <section class="banner center--big">
-    <img alt="banner image" class="banner__image" src="img/banner-1.webp">
-    <div class="banner__slogan">
-      <div class="slogan__big-title">THE BRAND</div>
-      <div class="slogan__small-title">OF LUXERIOUS <span>FASHION</span></div>
+  <section class="top center">
+    <h1 class="top__title">NEW ARRIVALS</h1>
+    <ul class="breadcrumbs">
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">HOME</a></li>
+      <li class="breadcrumbs__item"><a class="breadcrumbs__link" href="#">MEN</a></li>
+      <li class="breadcrumbs__item selected"><a class="breadcrumbs__link" href="#">NEW ARRIVALS</a></li>
+    </ul>
+  </section>
+  <section class="slider center--big">
+    <div class="slider__background"></div>
+    <img class="slider__image" src="img/product-7-big.webp">
+    <div class="slider__arrow slider__left-arrow">
+      <svg fill="none" height="23" viewBox="0 0 13 23" width="13" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12.7 3.75 4.95 11.5l7.75 7.75-1.55 3.1L.3 11.5 11.15.65l1.55 3.1Z" fill="#000"/>
+      </svg>
+    </div>
+    <div class="slider__arrow slider__right-arrow">
+      <svg fill="none" height="23" viewBox="0 0 13 23" width="13" xmlns="http://www.w3.org/2000/svg">
+        <path d="m.3 19.25 7.75-7.75L.3 3.75 1.85.65 12.7 11.5 1.85 22.35.3 19.25Z" fill="#000"/>
+      </svg>
     </div>
   </section>
-  <section class="categories container">
-    <div class="category">
-      <img alt="background image" class="category__image" src="img/background-1.webp">
-      <div class="category__text-block">
-        <div class="text-block__description">30% OFF</div>
-        <div class="text-block__title">FOR WOMEN</div>
+  <section class="product-information center">
+    <div class="product-information__wrapper">
+      <div class="product-information__collection-name">WOMEN COLLECTION</div>
+      <div class="product-information__red-line"></div>
+      <div class="product-information__title">MOSCHINO CHEAP AND CHIC</div>
+      <div class="product-information__description">Compellingly actualize fully researched processes before proactive
+        outsourcing. Progressively syndicate collaborative architectures before cutting-edge services. Completely
+        visualize parallel core competencies rather than exceptional portals.
       </div>
-    </div>
-    <div class="category">
-      <img alt="background image" class="category__image" src="img/background-2.webp">
-      <div class="category__text-block">
-        <div class="text-block__description">HOT DEAL</div>
-        <div class="text-block__title">FOR MEN</div>
+      <div class="product-information__price">$561</div>
+      <div class="product-information__grey-line"></div>
+      <div class="product-information__filter filter">
+        <details class="filter__item filter__color">
+          <summary class="filter__title">
+            CHOOSE COLOR
+            <svg fill="none" height="6" viewBox="0 0 11 6" width="11" xmlns="http://www.w3.org/2000/svg">
+              <path
+                  d="M5.002 5.648a.71.71 0 0 1-.457-.165L.258 1.88A.723.723 0 0 1 .65.607a.711.711 0 0 1 .523.164l3.83 3.228L8.831.885a.712.712 0 0 1 1.007.108.722.722 0 0 1-.1 1.052l-4.287 3.48a.71.71 0 0 1-.45.122Z"
+                  fill="#6F6E6E"/>
+            </svg>
+          </summary>
+          <div class="filter__box">
+            <label><input id="color-select1" name="color" type="radio">Red</label>
+            <label><input id="color-select2" name="color" type="radio">Green</label>
+            <label><input id="color-select3" name="color" type="radio">Black</label>
+            <label><input checked id="color-select4" name="color" type="radio">White</label>
+          </div>
+        </details>
+        <details class="filter__item filter__size">
+          <summary class="filter__title">
+            CHOOSE SIZE
+            <svg fill="none" height="6" viewBox="0 0 11 6" width="11" xmlns="http://www.w3.org/2000/svg">
+              <path
+                  d="M5.002 5.648a.71.71 0 0 1-.457-.165L.258 1.88A.723.723 0 0 1 .65.607a.711.711 0 0 1 .523.164l3.83 3.228L8.831.885a.712.712 0 0 1 1.007.108.722.722 0 0 1-.1 1.052l-4.287 3.48a.71.71 0 0 1-.45.122Z"
+                  fill="#6F6E6E"/>
+            </svg>
+          </summary>
+          <div class="filter__box">
+            <label><input id="size-select1" name="size" type="radio"> XS</label>
+            <label><input checked id="size-select2" name="size" type="radio"> S</label>
+            <label><input id="size-select3" name="size" type="radio"> M</label>
+            <label><input id="size-select4" name="size" type="radio"> L</label>
+          </div>
+        </details>
+        <details class="filter__item filter__quantity">
+          <summary class="filter__title">
+            QUANTITY
+            <svg fill="none" height="6" viewBox="0 0 11 6" width="11" xmlns="http://www.w3.org/2000/svg">
+              <path
+                  d="M5.002 5.648a.71.71 0 0 1-.457-.165L.258 1.88A.723.723 0 0 1 .65.607a.711.711 0 0 1 .523.164l3.83 3.228L8.831.885a.712.712 0 0 1 1.007.108.722.722 0 0 1-.1 1.052l-4.287 3.48a.71.71 0 0 1-.45.122Z"
+                  fill="#6F6E6E"/>
+            </svg>
+          </summary>
+          <div class="filter__box">
+            <label><input checked id="quantity-select1" name="quantity" type="radio">1</label>
+            <label><input id="quantity-select2" name="quantity" type="radio">2</label>
+            <label><input id="quantity-select3" name="quantity" type="radio">3</label>
+            <label><input id="quantity-select4" name="quantity" type="radio">4</label>
+          </div>
+        </details>
       </div>
-    </div>
-    <div class="category">
-      <img alt="background image" class="category__image" src="img/background-3.webp">
-      <div class="category__text-block">
-        <div class="text-block__description">NEW ARRIVALS</div>
-        <div class="text-block__title">FOR KIDS</div>
-      </div>
-    </div>
-    <div class="category category--long">
-      <img alt="background image" class="category__image" src="img/background-4.webp">
-      <div class="category__text-block">
-        <div class="text-block__description">LUXIROUS & TRENDY</div>
-        <div class="text-block__title">ACCESORIES</div>
-      </div>
+      <button class="button button--browse button--product-information">
+        <svg fill="none" height="29" viewBox="0 0 32 29" width="32" xmlns="http://www.w3.org/2000/svg">
+          <path
+              d="M26.2 29a2.477 2.477 0 1 1 .201 0h-.2ZM6.754 26.32a2.68 2.68 0 1 1 5.364 0 2.68 2.68 0 0 1-5.366 0h.002Zm3.8-5.634a1.184 1.184 0 0 1-1.145-.867L4.575 2.364H1.182a1.182 1.182 0 0 1 0-2.364h4.281a1.183 1.183 0 0 1 1.144.868l4.833 17.455h13.178L29 8.275h-14.6a1.183 1.183 0 1 1 0-2.365h16.413a1.178 1.178 0 0 1 .986.533 1.191 1.191 0 0 1 .1 1.122l-5.405 12.412a1.185 1.185 0 0 1-1.084.709H10.553Z"
+              fill="#E8E8E8"/>
+        </svg>
+        Add to Cart
+      </button>
     </div>
   </section>
   <section class="featured-items container">
-    <h3 class="featured-items__title">Fetured Items</h3>
-    <div class="featured-items__description">Shop for items based on what we featured in this week</div>
-    <div class="featured-items__products">
+    <div class="featured-items__products featured-items__products--without-button">
       <div class="product">
         <div class="product__add">
           <button class="button button--add"><i class="icon icon-cart"></i>Add to Cart</button>
         </div>
-        <img alt="product-1" class="product__image" height="420" src="img/product-1.webp" width="360">
-        <div class="product__title">ELLERY X M'O CAPSULE</div>
-        <div class="product__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of
-          cool Kym Ellery teams up with Moda Operandi.
-        </div>
-        <div class="product__price">$52.00</div>
-      </div>
-      <div class="product">
-        <div class="product__add">
-          <button class="button button--add"><i class="icon icon-cart"></i>Add to Cart</button>
-        </div>
-        <img alt="product-2" class="product__image" height="420" src="img/product-2.webp" width="360">
+        <img alt="product-4" class="product__image" height="420" src="img/product-4.webp" width="360">
         <div class="product__title">ELLERY X M'O CAPSULE</div>
         <div class="product__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of
           cool Kym Ellery teams up with Moda Operandi.
@@ -146,28 +189,6 @@
         <div class="product__add">
           <button class="button button--add"><i class="icon icon-cart"></i>Add to Cart</button>
         </div>
-        <img alt="product-4" class="product__image" height="420" src="img/product-4.webp" width="360">
-        <div class="product__title">ELLERY X M'O CAPSULE</div>
-        <div class="product__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of
-          cool Kym Ellery teams up with Moda Operandi.
-        </div>
-        <div class="product__price">$52.00</div>
-      </div>
-      <div class="product">
-        <div class="product__add">
-          <button class="button button--add"><i class="icon icon-cart"></i>Add to Cart</button>
-        </div>
-        <img alt="product-5" class="product__image" height="420" src="img/product-5.webp" width="360">
-        <div class="product__title">ELLERY X M'O CAPSULE</div>
-        <div class="product__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of
-          cool Kym Ellery teams up with Moda Operandi.
-        </div>
-        <div class="product__price">$52.00</div>
-      </div>
-      <div class="product">
-        <div class="product__add">
-          <button class="button button--add"><i class="icon icon-cart"></i>Add to Cart</button>
-        </div>
         <img alt="product-6" class="product__image" height="420" src="img/product-6.webp" width="360">
         <div class="product__title">ELLERY X M'O CAPSULE</div>
         <div class="product__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of
@@ -176,27 +197,6 @@
         <div class="product__price">$52.00</div>
       </div>
     </div>
-    <button class="button button--browse">Browse All Product</button>
-  </section>
-  <section class="information center">
-    <article class="information-block">
-      <div class="information-block__icon"><i class="icon icon-delivery"></i></div>
-      <h4 class="information-block__title">Free Delivery</h4>
-      <p class="information-block__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
-        with extensive models.</p>
-    </article>
-    <article class="information-block">
-      <div class="information-block__icon"><i class="icon icon-sale"></i></div>
-      <h4 class="information-block__title">Sales & discounts</h4>
-      <p class="information-block__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
-        with extensive models.</p>
-    </article>
-    <article class="information-block">
-      <div class="information-block__icon"><i class="icon icon-quality"></i></div>
-      <h4 class="information-block__title">Quality assurance</h4>
-      <p class="information-block__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
-        with extensive models.</p>
-    </article>
   </section>
   <section class="subscribe center">
     <div class="subscribe__photo-block">
