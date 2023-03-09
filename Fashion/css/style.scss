@@ -7,6 +7,14 @@
   font-family: 'Lato', sans-serif;
 }
 
+summary {
+  display: block;
+
+  &::-webkit-details-marker {
+    display: none;
+  }
+}
+
 a {
   text-decoration: none;
   font: inherit;
@@ -394,15 +402,21 @@ body {
 .filter {
   display: flex;
   gap: 23px;
-  position: relative;
+
+  &__item {
+    position: relative;
+  }
 
   &__item[open] &__title {
     color: vars.$titleColor;
   }
 
+  &__item[open] &__box {
+    box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+  }
+
   &__title {
     display: flex;
-    justify-content: center;
     align-items: center;
     gap: 9px;
     font-style: normal;
@@ -411,6 +425,7 @@ body {
     line-height: 17px;
     color: #6F6E6E;
     cursor: pointer;
+    white-space: nowrap;
 
     @media screen and (max-width: 767px) {
       font-size: 10px;
@@ -419,15 +434,16 @@ body {
   }
 
   &__box {
+    z-index: 100;
     display: flex;
     flex-direction: column;
     gap: 8px;
-    padding: 16px;
+    padding: 7px 9px 11px;
     position: absolute;
-    top: 24px;
+    left: 0;
+    top: 21px;
     background-color: #FFFFFF;
-    border: 1px solid #6F6E6E;
-    width: 100px;
+    min-width: 79px;
     font-style: normal;
     font-weight: 400;
     font-size: 14px;
@@ -435,9 +451,124 @@ body {
     color: #6F6E6E;
 
     label {
+      font-family: 'Roboto', sans-serif;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 16px;
+      color: #6F6E6E;
       display: flex;
-      gap: 8px;
+      gap: 9px;
     }
+  }
+
+  &__categories {
+    display: flex;
+    flex-direction: column;
+    gap: 11px;
+    padding: 24px;
+
+    & li {
+      cursor: pointer;
+    }
+
+    & li:hover {
+      color: vars.$titleColor;
+    }
+  }
+}
+
+.catalog-filter {
+  height: 132px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+
+  @media screen and (max-width: 1024px) {
+    height: 81px;
+  }
+
+  @media screen and (max-width: 767px) {
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  &__type {
+    margin-left: 0;
+    margin-right: 0;
+    width: 360px;
+    background-color: white;
+    z-index: 100;
+    padding: 13px 16px 16px 16px;
+    position: relative;
+
+    @media screen and (max-width: 767px) {
+      padding: 0;
+      width: unset;
+
+      .filter__title {
+        font-size: 0;
+      }
+
+      svg {
+        width: 37px;
+        height: 25px;
+      }
+
+
+    }
+
+    &[open] {
+      box-shadow: 6px 4px 35px rgba(0, 0, 0, 0.21);
+    }
+
+    &[open] > summary {
+      color: vars.$titleColor;
+    }
+
+    &[open] path {
+      fill: vars.$titleColor;
+    }
+
+    .filter__box {
+      width: 360px;
+      padding: 17px;
+      gap: 18px;
+      position: absolute;
+      top: unset;
+      box-shadow: 0 20px 20px rgb(0 0 0 / 21%);
+    }
+  }
+
+  &__sort {
+    display: flex;
+    gap: 28px;
+
+    @media screen and (max-width: 767px) {
+      .filter__title {
+        font-size: 12px;
+        line-height: 14px;
+      }
+    }
+  }
+
+}
+
+.filter-box__sub-box {
+  .sub-box__title {
+    padding: 11px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #6F6E6E;
+    border-left: 5px solid vars.$titleColor;
+    border-bottom: 1px solid #EBEBEB;
+    cursor: pointer;
+  }
+
+  &[open] .sub-box__title {
+    color: #EF5B70;
   }
 }
 
@@ -595,6 +726,10 @@ body {
     margin-left: 16px;
     margin-right: 30px;
     margin-bottom: 16px;
+
+    &:hover a {
+      color: vars.$titleColor;
+    }
   }
 
   &__description {
@@ -680,6 +815,50 @@ body {
       fill: vars.$titleColor;
       transition: fill 0.3s ease-in-out;
     }
+  }
+}
+
+.pagination {
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 96px;
+  width: fit-content;
+  border: 1px solid #EBEBEB;
+  border-radius: 5%;
+  padding: 12px 16px 13px 16px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #C4C4C4;
+  display: flex;
+  gap: 18px;
+  justify-content: center;
+  align-items: center;
+
+  @media screen and (max-width: 1024px) {
+    margin-bottom: 64px;
+  }
+
+  span {
+    margin-left: -18px;
+    margin-right: -18px;
+  }
+
+  &__link {
+    &:hover {
+      color: #EF5B70;
+    }
+  }
+
+  &__arrow-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__arrow-link:hover path {
+    fill: #EF5B70;
   }
 }
 
