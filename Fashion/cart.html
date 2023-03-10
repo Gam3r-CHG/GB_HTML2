@@ -9,6 +9,7 @@
   <link
       href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
       rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
   <link href="css/icons.css" rel="stylesheet">
 </head>
@@ -33,7 +34,7 @@
           </ul>
         </details>
         <details class="menu__sub-box" open>
-          <summary class="menu__title">WOMAN</summary>
+          <summary class="menu__title"> WOMAN</summary>
           <ul class="menu__links">
             <li><a class="menu__link" href="catalog.html">Accessories</a></li>
             <li><a class="menu__link" href="catalog.html">Jackets & Coats</a></li>
@@ -43,7 +44,7 @@
           </ul>
         </details>
         <details class="menu__sub-box" open>
-          <summary class="menu__title">KIDS</summary>
+          <summary class="menu__title"> KIDS</summary>
           <ul class="menu__links">
             <li><a class="menu__link" href="catalog.html">Accessories</a></li>
             <li><a class="menu__link" href="catalog.html">Jackets & Coats</a></li>
@@ -68,136 +69,71 @@
   </div>
 </header>
 <main>
-  <section class="banner center--big">
-    <img alt="banner image" class="banner__image" src="img/banner-1.webp">
-    <div class="banner__slogan">
-      <div class="slogan__big-title">THE BRAND</div>
-      <div class="slogan__small-title">OF LUXERIOUS <span>FASHION</span></div>
-    </div>
+  <section class="top center">
+    <h1 class="top__title">SHOPPING CART</h1>
   </section>
-  <section class="categories container">
-    <div class="category">
-      <img alt="background image" class="category__image" src="img/background-1.webp">
-      <div class="category__text-block">
-        <div class="text-block__description">30% OFF</div>
-        <div class="text-block__title">FOR WOMEN</div>
+  <form class="cart center" method="get">
+    <div class="cart__items">
+      <div class="cart-item">
+        <div class="cart-item__image"><img src="img/product-3.webp"></div>
+        <div class="cart-item__description-box">
+          <div class="cart-item__title">MANGO PEOPLE T-&nbsp;SHIRT</div>
+          <div class="cart-item__price">Price:<span class="cart-item__value--red">$300</span></div>
+          <div class="cart-item__color">Color:<span class="cart-item__value">Red</span></div>
+          <div class="cart-item__size">Size:<span class="cart-item__value">Xl</span></div>
+          <div class="cart-item__quantity">Quantity:<input class="cart-item__amount-input input input--cart-amount"
+                                                           id="product-3" name="productCount3" type="text" value="2">
+          </div>
+        </div>
+        <div class="cart-item__delete">
+          <svg fill="none" height="18" viewBox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
+                fill="#575757"/>
+          </svg>
+        </div>
+      </div>
+      <div class="cart-item">
+        <div class="cart-item__image"><img src="img/product-8.webp"></div>
+        <div class="cart-item__description-box">
+          <div class="cart-item__title">MANGO PEOPLE T-&nbsp;SHIRT</div>
+          <div class="cart-item__price">Price:<span class="cart-item__value--red">$300</span></div>
+          <div class="cart-item__color">Color:<span class="cart-item__value">Red</span></div>
+          <div class="cart-item__size">Size:<span class="cart-item__value">Xl</span></div>
+          <div class="cart-item__quantity">Quantity:<input class="cart-item__amount-input input input--cart-amount"
+                                                           id="product-8" name="productCount8" type="text"
+                                                           value="2"></div>
+        </div>
+        <div class="cart-item__delete">
+          <svg fill="none" height="18" viewBox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg">
+            <path
+                d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
+                fill="#575757"/>
+          </svg>
+
+        </div>
+      </div>
+      <div class="cart__buttons">
+        <button type="button" class="cart__button-clear button button--white">Clear shopping cart</button>
+        <button type="button" class="cart__button-continue button button--white">Continue shopping</button>
       </div>
     </div>
-    <div class="category">
-      <img alt="background image" class="category__image" src="img/background-2.webp">
-      <div class="category__text-block">
-        <div class="text-block__description">HOT DEAL</div>
-        <div class="text-block__title">FOR MEN</div>
+    <div class="cart__form">
+      <div class="form__address-box">
+        <h3 class="form__title">SHIPPING ADDRESS</h3>
+        <input class="form__city input" id="city" name="city" placeholder="City" required type="text">
+        <input class="form__state input" id="state" name="state" placeholder="State" required type="text">
+        <input class="form__zip input" id="zip" name="zip" placeholder="Postcode / Zip" required type="text">
+        <button type="button" class="form__button-quote button button--white button--white-sm">Get a quote</button>
+      </div>
+      <div class="form__total-box">
+        <div class="form__sub-total">SUB TOTAL<span class="form__sub-total--price">$900</span></div>
+        <div class="form__grand-total">GRAND TOTAL<span class="form__grand-total--price">$900</span></div>
+        <div class="form__grey-line"></div>
+        <button class="form__button-checkout button button--red-invert" type="submit">PROCEED TO CHECKOUT</button>
       </div>
     </div>
-    <div class="category">
-      <img alt="background image" class="category__image" src="img/background-3.webp">
-      <div class="category__text-block">
-        <div class="text-block__description">NEW ARRIVALS</div>
-        <div class="text-block__title">FOR KIDS</div>
-      </div>
-    </div>
-    <div class="category category--long">
-      <img alt="background image" class="category__image" src="img/background-4.webp">
-      <div class="category__text-block">
-        <div class="text-block__description">LUXIROUS & TRENDY</div>
-        <div class="text-block__title">ACCESORIES</div>
-      </div>
-    </div>
-  </section>
-  <section class="featured-items container">
-    <h3 class="featured-items__title">Fetured Items</h3>
-    <div class="featured-items__description">Shop for items based on what we featured in this week</div>
-    <div class="featured-items__products">
-      <div class="product" data-product-id="1">
-        <div class="product__add">
-          <button class="button button--add"><i class="icon icon-cart"></i>Add to Cart</button>
-        </div>
-        <img alt="product-1" class="product__image" height="420" src="img/product-1.webp" width="360">
-        <div class="product__title"><a href="product.html">ELLERY X M'O CAPSULE</a></div>
-        <div class="product__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of
-          cool Kym Ellery teams up with Moda Operandi.
-        </div>
-        <div class="product__price">$52.00</div>
-      </div>
-      <div class="product">
-        <div class="product__add" data-product-id="2">
-          <button class="button button--add"><i class="icon icon-cart"></i>Add to Cart</button>
-        </div>
-        <img alt="product-2" class="product__image" height="420" src="img/product-2.webp" width="360">
-        <div class="product__title"><a href="product.html">ELLERY X M'O CAPSULE</a></div>
-        <div class="product__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of
-          cool Kym Ellery teams up with Moda Operandi.
-        </div>
-        <div class="product__price">$52.00</div>
-      </div>
-      <div class="product" data-product-id="3">
-        <div class="product__add">
-          <button class="button button--add"><i class="icon icon-cart"></i>Add to Cart</button>
-        </div>
-        <img alt="product-3" class="product__image" height="420" src="img/product-3.webp" width="360">
-        <div class="product__title"><a href="product.html">ELLERY X M'O CAPSULE</a></div>
-        <div class="product__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of
-          cool Kym Ellery teams up with Moda Operandi.
-        </div>
-        <div class="product__price">$52.00</div>
-      </div>
-      <div class="product" data-product-id="4">
-        <div class="product__add">
-          <button class="button button--add"><i class="icon icon-cart"></i>Add to Cart</button>
-        </div>
-        <img alt="product-4" class="product__image" height="420" src="img/product-4.webp" width="360">
-        <div class="product__title"><a href="product.html">ELLERY X M'O CAPSULE</a></div>
-        <div class="product__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of
-          cool Kym Ellery teams up with Moda Operandi.
-        </div>
-        <div class="product__price">$52.00</div>
-      </div>
-      <div class="product" data-product-id="5">
-        <div class="product__add">
-          <button class="button button--add"><i class="icon icon-cart"></i>Add to Cart</button>
-        </div>
-        <img alt="product-5" class="product__image" height="420" src="img/product-5.webp" width="360">
-        <div class="product__title"><a href="product.html">ELLERY X M'O CAPSULE</a></div>
-        <div class="product__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of
-          cool Kym Ellery teams up with Moda Operandi.
-        </div>
-        <div class="product__price">$52.00</div>
-      </div>
-      <div class="product" data-product-id="6">
-        <div class="product__add">
-          <button class="button button--add"><i class="icon icon-cart"></i>Add to Cart</button>
-        </div>
-        <img alt="product-6" class="product__image" height="420" src="img/product-6.webp" width="360">
-        <div class="product__title"><a href="product.html">ELLERY X M'O CAPSULE</a></div>
-        <div class="product__description">Known for her sculptural takes on traditional tailoring, Australian arbiter of
-          cool Kym Ellery teams up with Moda Operandi.
-        </div>
-        <div class="product__price">$52.00</div>
-      </div>
-    </div>
-    <a class="featured-items__button button button--red" href="catalog.html">Browse All Product</a>
-  </section>
-  <section class="information center">
-    <article class="information-block">
-      <div class="information-block__icon"><i class="icon icon-delivery"></i></div>
-      <h4 class="information-block__title">Free Delivery</h4>
-      <p class="information-block__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
-        with extensive models.</p>
-    </article>
-    <article class="information-block">
-      <div class="information-block__icon"><i class="icon icon-sale"></i></div>
-      <h4 class="information-block__title">Sales & discounts</h4>
-      <p class="information-block__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
-        with extensive models.</p>
-    </article>
-    <article class="information-block">
-      <div class="information-block__icon"><i class="icon icon-quality"></i></div>
-      <h4 class="information-block__title">Quality assurance</h4>
-      <p class="information-block__text">Worldwide delivery on all. Authorit tively morph next-generation innov tion
-        with extensive models.</p>
-    </article>
-  </section>
+  </form>
   <section class="subscribe center">
     <div class="subscribe__photo-block">
       <img alt="circle photo" class="photo-block__image" src="img/photo.webp">
