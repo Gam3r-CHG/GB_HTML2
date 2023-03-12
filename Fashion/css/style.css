@@ -66,6 +66,18 @@ body {
 .header {
   background: #222222;
 }
+.header .icon {
+  cursor: pointer;
+}
+.header .icon path {
+  transition: fill 0.3s ease-in-out;
+}
+.header .icon:hover path {
+  fill: #F16D7F;
+}
+.header .icon:active {
+  transform: scale(0.95);
+}
 .header-wrapper {
   height: 75px;
   display: flex;
@@ -84,16 +96,17 @@ body {
     margin-left: 32px;
   }
 }
-.header__left .icon-find {
-  cursor: pointer;
-}
 .header__logo-image {
   width: 44px;
   height: 38px;
 }
+.header__logo-image:active {
+  transform: scale(0.95);
+}
 .header__right {
   display: flex;
   align-items: center;
+  gap: 32px;
 }
 @media screen and (max-width: 1024px) {
   .header__right {
@@ -105,46 +118,22 @@ body {
     margin-right: 16px;
   }
 }
-.header__right .icon-hamburger {
-  margin-right: 33px;
-  cursor: pointer;
-}
-@media screen and (max-width: 1024px) {
-  .header__right .icon-hamburger {
-    margin-right: 25px;
-  }
+.header__right .hamburger__label {
+  display: flex;
+  align-items: center;
 }
 @media screen and (max-width: 767px) {
-  .header__right .icon-hamburger {
-    margin-right: 0;
-  }
-}
-.header__right .icon-personal {
-  margin-right: 33px;
-  cursor: pointer;
-}
-@media screen and (max-width: 1024px) {
-  .header__right .icon-personal {
-    margin-right: 42px;
-  }
-}
-@media screen and (max-width: 767px) {
-  .header__right .icon-personal {
+  .header__right .registration-link {
     display: none;
   }
 }
-.header__right .icon-cart {
-  cursor: pointer;
-}
-@media screen and (max-width: 767px) {
-  .header__right .icon-cart {
-    display: none;
-  }
-}
-.header__right .icon-cart:after {
+.header__right .cart-link {
   position: relative;
-  top: -10px;
-  right: -25px;
+}
+.header__right .cart-link:after {
+  position: absolute;
+  top: -8px;
+  right: -7px;
   background-color: #F16D7F;
   border-radius: 50%;
   padding: 1px 6px 4px 6px;
@@ -153,6 +142,11 @@ body {
   font-size: 12px;
   line-height: 14px;
   color: #FFFFFF;
+}
+@media screen and (max-width: 767px) {
+  .header__right .cart-link {
+    display: none;
+  }
 }
 
 #hamburger {
@@ -874,7 +868,7 @@ body {
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
-  color: #B1B1B1;
+  color: #222222;
   border: 1px solid #4A4A4A;
 }
 .input::placeholder {
@@ -882,11 +876,11 @@ body {
   font-weight: 300;
   font-size: 13px;
   line-height: 16px;
-  color: #222222;
+  color: #B1B1B1;
 }
 .input--cart-amount {
   padding: 0;
-  width: 43px;
+  width: 50px;
   height: 24px;
   border: 1px solid #EAEAEA;
   font-weight: 400;
@@ -976,11 +970,19 @@ body {
   font-weight: 300;
   color: #FFFFFF;
   background-color: #F16D7F;
+  gap: 20px;
 }
 .button--red-invert:hover, .button--red-invert:focus {
   color: #F16D7F;
   background-color: transparent;
   box-shadow: 0 0 1px 1px #F16D7F;
+}
+.button--red-invert path {
+  fill: white;
+  transition: fill 0.3s ease-in-out;
+}
+.button--red-invert:hover path, .button--red-invert:focus path {
+  fill: #F16D7F;
 }
 .button--white {
   padding: 16px 40px;
@@ -1327,6 +1329,12 @@ body {
     line-height: 19px;
   }
 }
+.cart-item__link {
+  transition: color 0.3s ease-in-out;
+}
+.cart-item__link:hover {
+  color: #F16D7F;
+}
 .cart-item__value {
   margin-left: 8px;
   color: #6F6E6E;
@@ -1424,6 +1432,203 @@ body {
   .form__button-checkout {
     margin: 0 auto;
   }
+}
+
+.registration {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  padding-top: 64px;
+  padding-bottom: 96px;
+}
+@media screen and (max-width: 1024px) {
+  .registration {
+    padding-top: 40px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .registration {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+.registration-form {
+  width: 360px;
+  min-width: 360px;
+  margin-right: 0;
+}
+@media screen and (max-width: 767px) {
+  .registration-form {
+    margin-right: 8px;
+    width: unset;
+    min-width: unset;
+  }
+}
+.registration-form__input-box {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 39px;
+}
+.registration-form__input-box input:not(:last-of-type) {
+  margin-bottom: 21px;
+}
+.registration-form__name-box {
+  margin-bottom: 33px;
+}
+.registration-form__title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 19px;
+  color: #222222;
+  margin-bottom: 21px;
+}
+.registration-form__radio-box {
+  margin-top: 31px;
+  display: flex;
+  gap: 20px;
+}
+.registration-form__radio {
+  margin-right: 10px;
+  cursor: pointer;
+}
+.registration-form__radio-label {
+  display: flex;
+  align-items: center;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 11px;
+  line-height: 13px;
+  color: #000000;
+  cursor: pointer;
+  /* Customize the label (the container for radio input) */
+  position: relative;
+  padding-left: 27px;
+  margin-bottom: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  /* Hide the browser's default radio button */
+  /* Create a custom radio button */
+  /* On mouse-over, add a custom background color */
+  /* When the radio button is checked, add a color background */
+  /* Create the indicator (the dot/circle - hidden when not checked) */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */
+}
+.registration-form__radio-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.registration-form__radio-label .checkmark {
+  position: absolute;
+  left: 0;
+  height: 17px;
+  width: 17px;
+  border-radius: 50%;
+  border: 1px solid #A4A4A4;
+}
+.registration-form__radio-label:hover input ~ .checkmark {
+  background-color: #F16D7F;
+}
+.registration-form__radio-label:hover {
+  color: #F16D7F;
+}
+.registration-form__radio-label input:checked ~ .checkmark {
+  background-color: #F16D7F;
+}
+.registration-form__radio-label .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.registration-form__radio-label input:checked ~ .checkmark:after {
+  display: block;
+}
+.registration-form__radio-label .checkmark:after {
+  top: 2px;
+  left: 2px;
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  background: white;
+}
+.registration-form__small-text {
+  margin-top: 16px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  line-height: 16px;
+  color: #B1B1B1;
+}
+.registration-form__text-block {
+  max-width: 652px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 0;
+}
+@media screen and (max-width: 767px) {
+  .registration-form__text-block {
+    margin-left: 8px;
+    max-width: 100%;
+  }
+}
+.registration-form__tb-title {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 22px;
+}
+@media screen and (max-width: 1024px) {
+  .registration-form__tb-title {
+    font-size: 16px;
+    line-height: 19px;
+    margin-bottom: 32px;
+  }
+}
+.registration-form__tb-text {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+  margin-bottom: 22px;
+}
+@media screen and (max-width: 1024px) {
+  .registration-form__tb-text {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+.registration-form__tb-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 24px;
+  line-height: 29px;
+  color: #000000;
+}
+@media screen and (max-width: 1024px) {
+  .registration-form__tb-list {
+    font-size: 16px;
+    line-height: 19px;
+  }
+}
+.registration-form__tb-list-item {
+  display: flex;
+}
+.registration-form__tb-list-item::before {
+  content: url("data:image/svg+xml,%3Csvg width='20' height='16' viewBox='0 0 20 16' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M19.803 0H18.09a.777.777 0 0 0-.615.303L7.37 13.283 2.525 7.058a.786.786 0 0 0-.615-.304H.196a.199.199 0 0 0-.154.32l6.713 8.624a.78.78 0 0 0 1.233 0L19.958.318A.197.197 0 0 0 19.804 0Z' fill='%23000'/%3E%3C/svg%3E");
+  margin-right: 23px;
 }
 
 .footer {
