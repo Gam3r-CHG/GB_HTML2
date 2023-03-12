@@ -96,71 +96,61 @@
 </header>
 <main>
   <section class="top center">
-    <h1 class="top__title">SHOPPING CART</h1>
+    <h1 class="top__title">REGISTRATION</h1>
   </section>
-  <form class="cart center" method="get">
-    <div class="cart__items">
-      <div class="cart-item">
-        <div class="cart-item__image"><img src="img/product-3.webp"></div>
-        <div class="cart-item__description-box">
-          <div class="cart-item__title"><a class="cart-item__link" href="product.html">MANGO PEOPLE T-&nbsp;SHIRT</a>
-          </div>
-          <div class="cart-item__price">Price:<span class="cart-item__value--red">$300</span></div>
-          <div class="cart-item__color">Color:<span class="cart-item__value">Red</span></div>
-          <div class="cart-item__size">Size:<span class="cart-item__value">Xl</span></div>
-          <div class="cart-item__quantity">Quantity:<input class="cart-item__amount-input input input--cart-amount"
-                                                           id="product-3" max="99" min="0" name="productCount3"
-                                                           type="number" value="2">
-          </div>
-        </div>
-        <div class="cart-item__delete">
-          <svg fill="none" height="18" viewBox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
-                fill="#575757"/>
-          </svg>
+  <form class="registration center" method="post">
+    <div class="registration-form">
+      <div class="registration-form__name-box registration-form__input-box">
+        <h4 class="registration-form__title">Your Name</h4>
+        <input class="registration-form__first-name input" name="first-name" placeholder="First Name"
+               required type="text">
+        <input class="registration-form__last-name input" name="last-name" placeholder="Last Name"
+               required type="text">
+        <div class="registration-form__radio-box">
+          <label class="registration-form__radio-label"><input checked class="registration-form__radio input"
+                                                               name="gender" type="radio" value="male">Male<span
+              class="checkmark"></span></label>
+          <label class="registration-form__radio-label"><input class="registration-form__radio input" name="gender"
+                                                               type="radio" value="female">Female<span
+              class="checkmark"></span></label>
+          <label class="registration-form__radio-label"><input class="registration-form__radio input" name="gender"
+                                                               type="radio" value="other">Other<span
+              class="checkmark"></span></label>
         </div>
       </div>
-      <div class="cart-item">
-        <div class="cart-item__image"><img src="img/product-8.webp"></div>
-        <div class="cart-item__description-box">
-          <div class="cart-item__title"><a class="cart-item__link" href="product.html">MANGO PEOPLE T-&nbsp;SHIRT</a>
-          </div>
-          <div class="cart-item__price">Price:<span class="cart-item__value--red">$300</span></div>
-          <div class="cart-item__color">Color:<span class="cart-item__value">Red</span></div>
-          <div class="cart-item__size">Size:<span class="cart-item__value">Xl</span></div>
-          <div class="cart-item__quantity">Quantity:<input class="cart-item__amount-input input input--cart-amount"
-                                                           id="product-8" max="99" min="0"
-                                                           name="productCount8" type="number" value="2"></div>
-        </div>
-        <div class="cart-item__delete">
-          <svg fill="none" height="18" viewBox="0 0 18 18" width="18" xmlns="http://www.w3.org/2000/svg">
-            <path
-                d="M11.2453 9L17.5302 2.71516C17.8285 2.41741 17.9962 2.01336 17.9966 1.59191C17.997 1.17045 17.8299 0.76611 17.5322 0.467833C17.2344 0.169555 16.8304 0.00177586 16.4089 0.00140366C15.9875 0.00103146 15.5831 0.168097 15.2848 0.465848L9 6.75069L2.71516 0.465848C2.41688 0.167571 2.01233 0 1.5905 0C1.16868 0 0.764125 0.167571 0.465848 0.465848C0.167571 0.764125 0 1.16868 0 1.5905C0 2.01233 0.167571 2.41688 0.465848 2.71516L6.75069 9L0.465848 15.2848C0.167571 15.5831 0 15.9877 0 16.4095C0 16.8313 0.167571 17.2359 0.465848 17.5342C0.764125 17.8324 1.16868 18 1.5905 18C2.01233 18 2.41688 17.8324 2.71516 17.5342L9 11.2493L15.2848 17.5342C15.5831 17.8324 15.9877 18 16.4095 18C16.8313 18 17.2359 17.8324 17.5342 17.5342C17.8324 17.2359 18 16.8313 18 16.4095C18 15.9877 17.8324 15.5831 17.5342 15.2848L11.2453 9Z"
-                fill="#575757"/>
-          </svg>
-
-        </div>
+      <div class="registration-form__login-box registration-form__input-box">
+        <h4 class="registration-form__title">Login details</h4>
+        <input class="registration-form__email input" name="email" placeholder="Email"
+               required type="email">
+        <input class="registration-form__password input" name="password" placeholder="Password"
+               required type="password">
+        <p class="registration-form__small-text">Please use 8 or more characters, with at least 1 number and a mixture
+          of uppercase and lowercase letters</p>
       </div>
-      <div class="cart__buttons">
-        <button class="cart__button-clear button button--white" type="button">Clear shopping cart</button>
-        <button class="cart__button-continue button button--white" type="button">Continue shopping</button>
-      </div>
+      <button class="registration-form__join-button button button--red-invert" type="submit">JOIN NOW
+        <svg fill="none" height="10" viewBox="0 0 17 10" width="17" xmlns="http://www.w3.org/2000/svg">
+          <path clip-rule="evenodd"
+                d="M11.54.208a.709.709 0 0 1 1.003 0l4.25 4.25a.708.708 0 0 1 0 1.003l-4.25 4.25a.71.71 0 0 1-1.003-1.003l3.75-3.749-3.75-3.748a.708.708 0 0 1 0-1.003Z"
+                fill="#fff"
+                fill-rule="evenodd"/>
+          <path clip-rule="evenodd"
+                d="M0 4.96a.708.708 0 0 1 .708-.709h14.875a.708.708 0 0 1 0 1.417H.708A.708.708 0 0 1 0 4.959Z"
+                fill="#fff"
+                fill-rule="evenodd"/>
+        </svg>
+      </button>
     </div>
-    <div class="cart__form">
-      <div class="form__address-box">
-        <h3 class="form__title">SHIPPING ADDRESS</h3>
-        <input class="form__city input" id="city" name="city" placeholder="City" required type="text">
-        <input class="form__state input" id="state" name="state" placeholder="State" required type="text">
-        <input class="form__zip input" id="zip" name="zip" placeholder="Postcode / Zip" required type="text">
-        <button class="form__button-quote button button--white button--white-sm" type="button">Get a quote</button>
-      </div>
-      <div class="form__total-box">
-        <div class="form__sub-total">SUB TOTAL<span class="form__sub-total--price">$900</span></div>
-        <div class="form__grand-total">GRAND TOTAL<span class="form__grand-total--price">$900</span></div>
-        <div class="form__grey-line"></div>
-        <button class="form__button-checkout button button--red-invert" type="submit">PROCEED TO CHECKOUT</button>
-      </div>
+    <div class="registration-form__text-block">
+      <h3 class="registration-form__tb-title">LOYALTY HAS ITS PERKS</h3>
+      <p class="registration-form__tb-text">Get in on the loyalty program where you can earn points and unlock serious
+        perks. Starting with these as soon as you join:</p>
+      <ul class="registration-form__tb-list">
+        <li class="registration-form__tb-list-item">15% off welcome offer</li>
+        <li class="registration-form__tb-list-item">Free shipping, returns and exchanges on all orders</li>
+        <li class="registration-form__tb-list-item">$10 off a purchase on your birthday</li>
+        <li class="registration-form__tb-list-item">Early access to products</li>
+        <li class="registration-form__tb-list-item">Exclusive offers & rewards</li>
+      </ul>
     </div>
   </form>
   <section class="subscribe center">

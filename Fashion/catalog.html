@@ -17,8 +17,15 @@
 <header class="header">
   <div class="header-wrapper center">
     <div class="header__left">
-      <a href="index.html"><img alt="#" class="header__logo-image" height="38" src="img/logo.webp" width="44"></a>
-      <i class="icon icon-find"></i>
+      <a href="index.html"><img alt="logo image" class="header__logo-image" height="38" src="img/logo.webp" width="44"></a>
+      <button class="button button--find">
+        <svg class="icon icon-find" fill="none" height="28" viewBox="0 0 27 28" width="27"
+             xmlns="http://www.w3.org/2000/svg">
+          <path
+              d="M19.059 17.625A10.395 10.395 0 1 0 11.419 21a10.319 10.319 0 0 0 6.24-2.09l7.749 7.807a.927.927 0 0 0 .66.285.903.903 0 0 0 .66-.285.971.971 0 0 0 0-1.346l-7.67-7.746ZM2.886 10.5a8.535 8.535 0 1 1 8.534 8.6 8.575 8.575 0 0 1-8.534-8.6Z"
+              fill="#E8E8E8"/>
+        </svg>
+      </button>
     </div>
     <div class="header__right">
       <input id="hamburger" name="hamburger" type="checkbox">
@@ -62,9 +69,28 @@
           </svg>
         </button>
       </nav>
-      <label for="hamburger"><i class="icon icon-hamburger"></i></label>
-      <i class="icon icon-personal"></i>
-      <a href="cart.html"><i class="icon icon-cart"></i></a>
+      <label class="hamburger__label" for="hamburger">
+        <svg class="icon icon-hamburger" fill="none" height="23" viewBox="0 0 32 23" width="32"
+             xmlns="http://www.w3.org/2000/svg">
+          <path d="M0 23V20.31H32V23H0ZM0 12.76V10.07H32V12.76H0ZM0 2.69V0H32V2.69H0Z" fill="#E8E8E8"/>
+        </svg>
+      </label>
+      <a class="registration-link" href="registration.html">
+        <svg class="icon icon-personal" fill="none" height="29" viewBox="0 0 29 29" width="29"
+             xmlns="http://www.w3.org/2000/svg">
+          <path
+              d="M14.5 19.937c4.5 0 8.156-4.473 8.156-9.969C22.656 4.472 19 0 14.5 0a7.45 7.45 0 0 0-5.834 3 11.159 11.159 0 0 0-2.322 6.974c0 5.491 3.656 9.963 8.156 9.963Zm0-18.124c3.5 0 6.344 3.659 6.344 8.156 0 4.497-2.846 8.156-6.344 8.156s-6.344-3.66-6.345-8.156C8.154 5.473 11 1.813 14.5 1.813Zm6.344 16.312a.907.907 0 0 0 0 1.813 6.351 6.351 0 0 1 6.344 6.344.908.908 0 0 1-.906.906H2.72a.908.908 0 0 1-.906-.906 6.352 6.352 0 0 1 6.344-6.344.906.906 0 0 0 0-1.812A8.165 8.165 0 0 0 0 26.281 2.722 2.722 0 0 0 2.719 29h23.563A2.722 2.722 0 0 0 29 26.281a8.166 8.166 0 0 0-8.156-8.156Z"
+              fill="#E8E8E8"/>
+        </svg>
+      </a>
+      <a class="cart-link" href="cart.html">
+        <svg class="icon" fill="none" height="29" viewBox="0 0 32 29" width="32"
+             xmlns="http://www.w3.org/2000/svg">
+          <path
+              d="M26.2 29a2.477 2.477 0 1 1 .201 0h-.2ZM6.754 26.32a2.68 2.68 0 1 1 5.364 0 2.68 2.68 0 0 1-5.366 0h.002Zm3.8-5.634a1.184 1.184 0 0 1-1.145-.867L4.575 2.364H1.182a1.182 1.182 0 0 1 0-2.364h4.281a1.183 1.183 0 0 1 1.144.868l4.833 17.455h13.178L29 8.275h-14.6a1.183 1.183 0 1 1 0-2.365h16.413a1.178 1.178 0 0 1 .986.533 1.191 1.191 0 0 1 .1 1.122l-5.405 12.412a1.185 1.185 0 0 1-1.084.709H10.553Z"
+              fill="#E8E8E8"/>
+        </svg>
+      </a>
     </div>
   </div>
 </header>
@@ -339,8 +365,8 @@
     <div class="subscribe__input-block">
       <div class="input-block__big-title">SUBSCRIBE</div>
       <div class="input-block__small-title">FOR OUR NEWLETTER AND PROMOTION</div>
-      <form class="input-block__input">
-        <input class="input input--subscribe" placeholder="Enter Your Email" required type="email">
+      <form class="input-block__input" method="get">
+        <input class="input input--subscribe" name="email" placeholder="Enter Your Email" required type="email">
         <button class="button button--subscribe" type="submit">Subscribe</button>
       </form>
     </div>
